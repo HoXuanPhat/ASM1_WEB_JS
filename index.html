@@ -1,0 +1,39 @@
+<!DOCTYPE html> <html>
+<head> <title> Thực tập fetch</title>
+       <link rel="stylesheet" href="css/c1.css">
+</head>
+<body>
+<div class="container">
+    <header id="header"> </header>
+    <nav id="menu"> 
+        <a href="#top">Trang chủ</a>
+        <a href="#listkhoahoc"> Khóa học</a>
+        <a href="#listhocvien"> Học viên</a>
+        <a href="#listcoso"> Cơ sở</a>
+    </nav>
+    <main>
+        <section id="listkhoahoc">
+            <h2>Danh sách khóa học</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listhocvien">
+            <h2>Danh sách học viên</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listcoso">
+            <h2>Danh sách cơ sở</h2>
+            <div id="data"></div>
+        </section>
+   </main>
+   <footer> Sinh viên : Hồ Xuân Phát MSSV PS33107 @2025 </footer>
+</div>
+</body>
+ </html>
+ <script type="module">
+    import { showlistkhoahoc, showlisthocvien, showlistcoso , showlistthuonghieu} from './js/app.js';
+    document.querySelector("#listkhoahoc #data").innerHTML = showlistkhoahoc();
+    document.querySelector("#listhocvien #data").innerHTML = showlisthocvien();
+    document.querySelector("#listcoso #data").innerHTML = showlistcoso();
+    document.querySelector("#listthuonghieu #data").innerHTML = await showlistthuonghieu();
+
+ </script>
